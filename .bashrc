@@ -1,8 +1,7 @@
 # .bashrc
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific environment
@@ -17,11 +16,11 @@ export PATH
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
 fi
 
 unset rc
@@ -29,15 +28,21 @@ unset rc
 # pnpm
 export PNPM_HOME="/home/tmalik/.local/share"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
 # begin command prompt on new line
-new_line='
-'
-PS1=${PS1}${new_line}
+new_line=$'\n'
+# new_line='
+# '
+
+# PS1=${PS1}${new_line}
+
+if [[ $PS1 != *"$new_line"* ]]; then
+    PS1="${PS1}${new_line}"
+fi
 
 export PATH=$PATH:/usr/lib/go-1.22/bin
 export NVM_DIR="$HOME/.nvm"
