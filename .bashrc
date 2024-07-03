@@ -35,10 +35,6 @@ esac
 
 # begin command prompt on new line
 new_line=$'\n'
-# new_line='
-# '
-
-# PS1=${PS1}${new_line}
 
 if [[ $PS1 != *"$new_line"* ]]; then
     PS1="${PS1}${new_line}"
