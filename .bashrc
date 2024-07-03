@@ -43,17 +43,3 @@ export PATH=$PATH:/usr/lib/go-1.22/bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias cdd='cd ..'
-alias ll='ls -al'
-alias la='ls -A'
-alias l='ls -CF'
-alias nv='vim'
-alias gs='git status'
-alias gf='git fetch'
-alias gd='git diff'
-alias ga='git add -A'
-alias gc='git commit -m'
-alias gpp='git push'
-alias gp='git pull'
-alias glint='golangci-lint'
